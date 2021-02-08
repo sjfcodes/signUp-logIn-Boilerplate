@@ -1,1 +1,1 @@
-# signUp-logIn-Boilerplate
+# gym-buddy
