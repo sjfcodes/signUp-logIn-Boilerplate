@@ -1,0 +1,38 @@
+body {
+    background-color: rgba(250, 128, 114, 0.281);
+    text-align: center;
+}
+
+.nav-wrapper {
+    text-align: start !important;
+}
+
+.brand-logo {
+    padding-left: 1rem !important;
+}
+
+.container {
+    margin: 5rem auto;
+    width: 30vw;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.error {
+    color: rgba(255, 0, 0, 0.438);
+}
+
+.landing-item {
+    margin: 2rem !important;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 990px) {
+    body {
+        background-color: rgba(100, 148, 237, 0.281);
+    }
+
+    .container {
+        width: 80vw;
+    }
+}
