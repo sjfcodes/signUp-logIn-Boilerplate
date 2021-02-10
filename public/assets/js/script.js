@@ -4,11 +4,7 @@ $(document).ready(() => {
     $('.sidenav').sidenav();
 
 
-    doc.on('click', ".home", () => {
-        $('main').fadeOut(() => {
-            location.href = "/"
-        })
-    })
+    doc.on('click', ".home", () => { $('main').fadeOut(() => { location.href = "/" }) })
 
     doc.on('click', '.logout', () => {
         $.ajax({
@@ -16,27 +12,21 @@ $(document).ready(() => {
             dataType: 'json',
             url: '/logout'
         }).then(data => {
-            $('main').fadeOut('slow', () => {
-                location.href = "/"
-            })
-        }).fail(err => {
-            console.log(err)
-        })
+            $('main').fadeOut('slow', () => { location.href = "/" })
+        }).fail(err => { console.log(err) })
     })
 
 
     doc.on("click", "#signUpBtn", (event) => {
         event.preventDefault()
-        $('#landingWindow').slideUp('slow', () => {
-            $('#signUpWindow').slideDown('slow')
-        })
+        $('#landingWindow').slideUp('slow', () => { $('#signUpWindow').slideDown('slow') })
     })
+
 
     doc.on("click", "#signInBtn", (event) => {
         event.preventDefault()
         $('#landingWindow').slideUp('slow', () => {
             $("#loginWindow").slideDown('slow')
-
         })
     })
 
@@ -49,16 +39,15 @@ $(document).ready(() => {
             url: 'api/session'
         }).then(data => {
             if (data) {
-                $('#messageBoard').prepend(`<h5>welcome, ${data.first_name}</h5>`)
+                $('#messageBoard').prepend(`<h6>Welcome, ${data.first_name}!</h6>`)
                 $('#messageBoard').fadeIn('slow')
+                $('.logout').text(`logout - ${data.first_name}`)
             } else {
-                $('#messageBoard').prepend(`<h5>please login or sign up</h5>`)
+                $('#messageBoard').prepend(`<h6>Please login or sign up</h6>`)
                 $('#messageBoard').fadeIn('slow')
                 $('main').fadeIn('slow')
             }
-        }).fail(err => {
-            console.log(err)
-        })
+        }).fail(err => { console.log(err) })
     }
 
     loadSession()

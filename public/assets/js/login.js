@@ -16,13 +16,14 @@ $(document).ready(() => {
                     password: password
                 }
             }).then(data => {
+                console.log(data)
                 if (!data) {
-                    $('#loginFail').removeClass('hide')
+                    $('#LoginLabelUsername').addClass('error').text('Wrong Username or Password')
                 } else {
-                    $("#loginWindow").fadeOut('slow', () => {
-                        location.href = `/`
-                    })
+                    $("#loginWindow").fadeOut('slow', () => { location.href = `/` })
                 }
+            }).fail(err => {
+                console.log(err)
             })
         }
     })
