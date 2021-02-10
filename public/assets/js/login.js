@@ -22,9 +22,7 @@ $(document).ready(() => {
                 } else {
                     $("#loginWindow").fadeOut('slow', () => { location.href = `/` })
                 }
-            }).fail(err => {
-                console.log(err)
-            })
+            }).fail(err => { console.log(err) })
         }
     })
 
