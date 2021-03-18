@@ -33,31 +33,13 @@
 
 
 
->## Product
-
-* [Check it out!]() 
-
-![Screenshot](./public/assets/images/screenshot.png)
-
-<br>
-
 >## Installation
 
 1. Instal Node.js
 2. Clone repo and navigate to root folder
-3. Run npm i to install dependencies
-4. Run Node server.js and open browser window to localhost:<PORT-NUMBER>
+3. Run `npm i` to install dependencies
+4. Run `node server.js` and open browser window to localhost:<PORT-NUMBER>
 5. Build the rest of your application.
-
-<br>
-
->## Usage
-
-1. 
-2. 
-3. 
-4. 
-5. 
 
 <br>
 
@@ -69,11 +51,6 @@
 
 <br>
 
->## Testing
-
-* 
-
-<br>
 
 >## Questions
 
